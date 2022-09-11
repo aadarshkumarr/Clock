@@ -1,0 +1,97 @@
+:root {
+    --main-bg-color: #1e1f26;
+    --main-text-color: #ccc;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    background-color: var(--main-bg-color);
+    position: relative;
+    transition: all ease 0.2s;
+}
+
+.clock {
+    min-height: 18em;
+    min-width: 18em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-bg-color);
+    background-image: url("https://imvpn22.github.io/analog-clock/clock.png");
+    background-position: center center;
+    background-size: cover;
+    border-radius: 50%;
+    border: 8px solid #00D8FF;
+    transition: all ease 0.2s;
+}
+
+.clock:before {
+    content: "";
+    height: 0.75rem;
+    width: 0.75rem;
+    background-color: var(--main-text-color);
+    border: 2px solid var(--main-bg-color);
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1000;
+    transition: all ease 0.2s;
+}
+
+.hour,
+.min,
+.sec {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.hour {
+    height: 10em;
+    width: 10em;
+}
+
+.hour:before {
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 6px;
+    background-color: var(--main-text-color);
+    border-radius: 6px;
+}
+
+.min {
+    height: 12em;
+    width: 12em;
+}
+
+.min:before {
+    content: "";
+    height: 50%;
+    width: 4px;
+    background-color: var(--main-text-color);
+    border-radius: 4px;
+}
+
+.sec {
+    height: 13em;
+    width: 13em;
+}
+
+.sec:before {
+    content: "";
+    height: 60%;
+    width: 2px;
+    background-color: #00D8FF;
+    border-radius: 2px;
+}
